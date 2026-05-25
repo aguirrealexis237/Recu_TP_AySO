@@ -1,0 +1,188 @@
+
+sudo loadkeys es
+git clone https://github.com/sofiasartori/UNT-FRA_SSSO_Examenes
+git clone git://github.com/sofiasartori/UTN-FRA_SO_Examenes
+git clone https://github.com/sofiasartori/UNT-FRA_SO_Examenes
+git clone git://github.com/sofiasartori/UNT-FRA_SO_Examenes.git
+wget https://github.com/sofiasartori/UNT-FRA_SO_Examenes/archive/refs/heads/master.zip
+rm -f master.zip
+wget https://github.com/sofiasartori/UTN-FRA_SO_Examenes/archive/refs/heads/main.zip
+unzip main.zip
+sudo apt install unzip
+unzip main.zip
+mv UTN-FRA_SO_Examenes-main UTN-FRA_SO_Examenes
+bash UTN-FRA_SO_Examenes/script_precondicion.sh
+ls
+bash UTN-FRA_SO_Examenes/script_Precondicion.sh
+source ~/.bashrc
+sudo loadkeys es
+ls
+git clone git://github.com/aguirrealexis237/Recu_TP_AySSO.git
+wget https://github.com/aguirrealexis237/Recu_TP_AySO/archive/refs/heads/main.zip -0 examen.zip
+wget https://github.com/aguirrealexis237/Recu_TP_AySO/archive/refs/heads/main.zip
+unzip main.zip.1
+mv Recu_TP_AySO-main Recu_TP_AySO
+cd Recu_TP_AySO
+ls
+nano README.md
+clear
+n
+nano -w README.md
+echo -e "Nombre: Alexis Aguirre\nComision: 115\nTurno: Mañana" > README.md
+cat README.md
+sudo mkdir -p /datos/{texto/{libros,revistas},videos/{peliculas,series}}
+ls -r /datos
+echo 'sudo mkdir -p /datos{texto/{libros,revistas},videos/{peliculas,seriª' > Punto_A.sh
+git add Punto_A.sh
+c ~/Recu_TP_AySO
+cd ~/Recu_TP_AySO
+
+echo 'sudo mkdir -p /datos/{textos/{libros,revistas},videos/{peliculas,series}}' > Punto_A.sh
+git add Punto_A.sh
+clear && pwd && ls -la
+git init
+git remote add origin https://github.com/aguirrealexis237/Recu_TP_AySO.git
+git branch -M main
+git add README.md Punto_A.sh
+git commit -m "Primeros archivos"
+git config --global user.email "aguirrealexis237@gmail.com"
+git config --global user.name "aguirrealexis237"
+git commit -m "Primeros archivos"
+git push -u origin HEAD:main
+
+
+git push -u origin HEAD:main
+sudo loadkeys es
+cd ~/Recu_TP_AySO
+git pull origin main --allow-unrelated-histories
+git push -u origin HEAD:main
+git merge --abort
+rm README.md
+git checkout README.md
+git push -u origin HEAD:main
+git push -f origin HEAD:main
+nano usuario.sh
+ls
+chmod +x usuario.sh
+./usuario.sh
+nanobusuario.sh
+nano usuario.sh
+./usuario.sh
+rm usuario.sh
+nano usuario.sh
+chmod +x usuario.sh
+./usuario.sh
+rm usuario.sh
+
+/
+sudo loadkeys es
+cd ~/Recu_TP_AySO
+cat << 'EOF' > usuario.sh
+#!/bin/bash
+
+sudo groupadd p1c1_2026_g1
+sudo useradd -m -s /bin/bash -G p1c1_2026_g1 p1c1_2026_u1
+echo "p1c1_2026_u1:clave1" | sudo chpasswd
+EOF
+
+chmod +x usuario.sh
+./usuario.sh
+sudo chown -R p1c1_2026_u1:p1c1_2026_g1 /datos/
+sudo chmod -R 750 /datos/
+sudo su - p1c1_2026_u1 -c "whoami > /datos/validar1.txt"
+cat << 'EOF' > Punto_B.sh
+#!/bin/bash
+
+./usuario.sh
+sudo chown -R p1c1_2026_u1:p1c1_2026_g1 /datos/
+sudo chmod -R 750 /datos/
+su -c "whoami" > /datos/validar1.txt" p1c1_2026_u1
+EOF
+
+chmod +x Punto_B.sh
+git add usuario.sh Punto_B.sh
+git commit -m "ADD: Create usuario.sh Y Punto_B.sh"
+git push
+git push --set-upstream origin master
+git push --set- upstream orrigin master
+git push --set-upstream origin master
+sudo groupadd p1c1_2026_Todos
+sudo useradd -m -s /bin/bash -g p1c1_2026_Todos p1c1_2026_u2
+echo "p1c1_2026_u2:clave1" | sudo chpasswd
+sudo usermod -aG p1c1_2026_Todos p1c1_2026_u1
+sudo chown -R :p1c1_2026_Todos /datos/
+sudo chmod -R 771 /datos/
+sudo su - p1c1_2026_u2 -c "id >> /datos/validar1.txt"
+cat << 'EOF' > Punto_C.sh
+#!/bin/bash
+
+sudo groupadd p1c1_2026_Todos
+sudo useradd -m -s /bin/bash -g p1c1_2026_Todos p1c1_2026_u2
+echo "p1c1_2026_u2:clave1" | sudo chpasswd
+sudo usermod -aG p1c1_2026_Todos p1c1_2026_u1
+sudo chown -R :p1c1_2026_Todos /datos/
+sudo chmod -R 771 /datos/
+su -c "id >> /datos/validar1.txt" p1c1_2026_u2
+EOF
+
+chmod +x Punto_C.sh
+git add Punto_C.sh
+git commit -m "ADD: Punto_C.sh completado"
+git push
+mkdir -p ~/Ejercicio_D/{rx/{lotes_{1..20},extras_{1..100}},tx/lotes_{1..20}}
+tree ~/Ejercio_D/ --noreport | pr -T -s' ' -w 80 --column 4
+cat << 'EOF' > Punto_D.sh
+#!/bin/bash
+
+mkdir -p ~/Ejercicio_D/{rx/{lotes_{1..20},extras_{1..100}},tx/lotes_{1..20}}
+EOF
+
+chmod +x Punto_D.sh
+git add Punto_D.sh
+git commit -m "ADD: Punto_D.sh completado"
+git push
+mkdir -p ~/Punto_E
+free -h | grep "Mem:" | awk '{print "Total de memoria RAM: " $2}' > ~/Punto_E/Filtro_basico.txt
+lscpu | grep "Model name:" | awk -F: '{print "Modelo y frecuencia: " $2}' | s 's/^[ \t]*//' >> ~/Punto_E/Filtro_basico.txt
+lscpu | grep "Model name:" | awk -F: '{print "Modelo y frecuencia: " $2}' | sed 's/^[ \t]*//' >> ~/Punto_E/Filtro_basico.txt
+cat << 'EOF' > Punto_E.sh
+#!/bin/bash
+
+mkdir -p ~/Punto_E
+free -h | grep "Mem:" | awk '{print "Total de memoria RAM: " $2}' >Punto_E/Filtro_basico.txt
+lscpu | grep "Model name:" | awk -F: '{print "Modelo y fecuencia: " $2} | sed 's/^[ \t]*//' >> ~/Punto_E/Filtro_basico.txt
+EOF
+
+chmod +x Punto_E.sh
+git add Punto_E.sh
+git commit -m "ADD: Punto_E.sh completado"
+git push
+mkdir -p ~/Punto_F
+echo "Mi IP publica es: $(curl -s ifconfig.me || hostname -I | awk '{print $1}')" > ~/Punto_F/Filtro_Avanzado.txt
+echo "Mi usuario es: $(whoami)" >> ~/Punto_F/Filtro_Avanzado.txt
+echo "El procesador es: $(lscpu | grep 'Model name:' | awk -F: '{print $2}' | sed 's/^[ \t]*//')" >> ~/Puntos_F/Filtro_Avanzado.txt
+echo "El procesador es: $(lscpu | grep 'Model name:' | awk -F: '{print $2}' | sed 's/^[ \t]*//')" >> ~/Punto_F/Filtro_Avanzado.txt
+cat << 'EOF' > Punto_F.sh
+#!/bin/bash
+
+mkdir -p ~/Punto_F
+echo "Mi IP publica es: $(curl -s ifconfig.me || hostname -I | awk '{print $1}')" > ~/Punto_F/Filtro_Avanzado.txt
+echo "Mi usuario es: $(whoami)" >> ~/Punto_F/Filtro_Avanzado.txt
+echo "El procesador es: $(lscpu | grep 'Model name:' | awk -F: '{print $2}' | sed 's/^[ \t]*//')" >> ~/Punto_F/Filtro_Avanzado.txt
+EOF
+
+chmod +x Punto_F.sh
+git add Punto_F.sh
+git commit -m "ADD: Punto_
+git commit -m "ADD: Punto_F.sh completado"
+git push
+loadkeys es
+sudo loadkeys es
+cd ~/Recu_TP:AySO
+sudo loadkeys es
+git add --all
+cd ~/Recu_TP_AySO
+git add --all
+git commit -m "ADD: Recuperando archivos guardados tras crasheo"
+history -w
+history -a
